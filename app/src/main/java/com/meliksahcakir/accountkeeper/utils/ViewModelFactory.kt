@@ -2,6 +2,7 @@ package com.meliksahcakir.accountkeeper.utils
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.meliksahcakir.accountkeeper.MainViewModel
 import com.meliksahcakir.accountkeeper.addupdate.AddUpdateAccountViewModel
 import com.meliksahcakir.accountkeeper.data.AccountRepository
 import com.meliksahcakir.accountkeeper.find.FindAccountsAndUsersViewModel
@@ -26,6 +27,8 @@ class ViewModelFactory(private val repository: AccountRepository) :
                     AddUpdateAccountViewModel(repository)
                 isAssignableFrom(FindAccountsAndUsersViewModel::class.java) ->
                     FindAccountsAndUsersViewModel(repository)
+                isAssignableFrom(MainViewModel::class.java) ->
+                    MainViewModel(repository)
                 else -> throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
             }
         } as T

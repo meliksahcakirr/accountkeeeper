@@ -25,7 +25,7 @@ import timber.log.Timber
 
 class FindAccountsFragment : Fragment(), AccountAdapterListener {
 
-    private val viewModel: FindAccountsAndUsersViewModel by viewModels() {
+    private val viewModel: FindAccountsAndUsersViewModel by viewModels(ownerProducer = { requireActivity() }) {
         ViewModelFactory((requireActivity().application as AccountKeeperApplication).accountRepository)
     }
 

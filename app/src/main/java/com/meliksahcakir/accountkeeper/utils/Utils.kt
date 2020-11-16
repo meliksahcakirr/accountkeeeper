@@ -23,6 +23,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
+import androidx.navigation.NavController
 import com.google.firebase.dynamiclinks.ktx.androidParameters
 import com.google.firebase.dynamiclinks.ktx.dynamicLinks
 import com.google.firebase.dynamiclinks.ktx.shortLinkAsync
@@ -177,4 +178,21 @@ fun createDynamicLinkForTheAccount(userId: String, accountId: String) =
 fun View.hideKeyboard() {
     val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.hideSoftInputFromWindow(windowToken, 0)
+}
+
+fun NavController.safeNavigateToDeepLink(uri: Uri) {
+    try {
+        if (graph.hasDeepLink(uri)) {
+            navigate(uri)
+        } else {
+            safeNavigateTo(R.id.personalAccountsFragment)
+        }
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
+fun NavController.safeNavigateTo(id: Int) {
+    val action = currentDestination?.getAction(id)
+    action?.let { navigate(id) }
 }

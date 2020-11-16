@@ -11,8 +11,11 @@ import timber.log.Timber
 
 class AccountKeeperApplication : Application() {
 
+    companion object {
+        var unhandledDeepLink: Uri? = null
+    }
+
     lateinit var accountRepository: AccountRepository
-    var unhandledDeepLink: Uri? = null
 
     override fun onCreate() {
         super.onCreate()
