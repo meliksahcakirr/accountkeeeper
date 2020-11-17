@@ -47,7 +47,7 @@
     <string name="personal_account">Personal Account</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="is_it_going_to_be_private">Is this private account?</string>
+    <string name="is_it_going_to_be_private">Is this a private account?</string>
     <string name="account_saved_successfully">Account is saved successfully.</string>
     <string name="undo">Undo</string>
     <string name="dark_theme">Dark Theme</string>
@@ -73,4 +73,5 @@
     <string name="try_to_search_for_longer_name">Try to search for a longer name.</string>
     <string name="accounts_not_found">Accounts have not been found.</string>
     <string name="search_your_saved_accounts">Search your saved accounts</string>
+    <string name="saved">Saved</string>
 </resources>

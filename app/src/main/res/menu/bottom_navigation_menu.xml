@@ -9,7 +9,7 @@
     <item
         android:id="@+id/friendAccountsFragment"
         android:icon="@drawable/ic_archive"
-        android:title="@string/others" />
+        android:title="@string/saved" />
 
     <item
         android:id="@+id/action_empty"

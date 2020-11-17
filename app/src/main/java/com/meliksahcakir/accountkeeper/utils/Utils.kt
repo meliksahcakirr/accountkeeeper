@@ -160,7 +160,7 @@ fun EditText.moveCursorToEnd() {
 fun createDynamicLinkForTheAccountList(userId: String) =
     Firebase.dynamicLinks.shortLinkAsync {
         link = Uri.parse("https://accountkeeper.info/?userId=$userId")
-        domainUriPrefix = "https://accountkeeper.page.link"
+        domainUriPrefix = "https://myaccountkeeper.page.link"
         androidParameters("com.meliksahcakir.accountkeeper") {
 
         }
@@ -169,7 +169,7 @@ fun createDynamicLinkForTheAccountList(userId: String) =
 fun createDynamicLinkForTheAccount(userId: String, accountId: String) =
     Firebase.dynamicLinks.shortLinkAsync {
         link = Uri.parse("https://accountkeeper.info/?userId=$userId&accountId=$accountId")
-        domainUriPrefix = "https://accountkeeper.page.link"
+        domainUriPrefix = "https://myaccountkeeper.page.link"
         androidParameters("com.meliksahcakir.accountkeeper") {
 
         }

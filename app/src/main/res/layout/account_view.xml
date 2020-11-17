@@ -145,7 +145,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/accountDescriptionImageView"
-            app:strokeColor="?attr/colorOnPrimary" />
+            app:strokeColor="?attr/colorOnPrimary"
+            app:rippleColor="@color/colorOnPrimary"/>
 
         <ImageView
             android:id="@+id/shareImageView"

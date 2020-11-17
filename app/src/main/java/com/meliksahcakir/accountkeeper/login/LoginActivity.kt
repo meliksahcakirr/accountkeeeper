@@ -57,13 +57,8 @@ class LoginActivity : AppCompatActivity() {
 
         loginViewModel.loginResult.observe(this) {
             updateViews(false)
-            when (it) {
-                is Result.Success -> Toast.makeText(
-                    applicationContext,
-                    "Welcome " + it.data.uid,
-                    Toast.LENGTH_SHORT
-                ).show()
-                is Result.Error -> Toast.makeText(
+            if (it is Result.Error) {
+                Toast.makeText(
                     applicationContext,
                     it.exception.message,
                     Toast.LENGTH_SHORT

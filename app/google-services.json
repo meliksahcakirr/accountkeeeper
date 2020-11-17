@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "65359925495",
-    "firebase_url": "https://account-keeper.firebaseio.com",
-    "project_id": "account-keeper",
-    "storage_bucket": "account-keeper.appspot.com"
+    "project_number": "80350977885",
+    "firebase_url": "https://accountkeeper-release.firebaseio.com",
+    "project_id": "accountkeeper-release",
+    "storage_bucket": "accountkeeper-release.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:65359925495:android:3f9a6ff7da6b11671c03f2",
+        "mobilesdk_app_id": "1:80350977885:android:d4d37e469f325be3e3d2b4",
         "android_client_info": {
           "package_name": "com.meliksahcakir.accountkeeper"
         }
       },
       "oauth_client": [
         {
-          "client_id": "65359925495-n6h1c9dnsgg7a2ntmu1qth8f4nl37sm6.apps.googleusercontent.com",
+          "client_id": "80350977885-skurjt0rcf8k6v4fjtilgm4ea5evolqe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.meliksahcakir.accountkeeper",
+            "certificate_hash": "6b83341086eeb67028c4289a59c33078b248c691"
+          }
+        },
+        {
+          "client_id": "80350977885-b2los2fu8629d8vbaa33uinef7mlj3qk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCNLHe5qn42dQ8AhkrNyO84qkikc7rfIQ0"
+          "current_key": "AIzaSyCWdebkbDYOo5sWuoW6UnEQvnhqSgaCKW4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "65359925495-n6h1c9dnsgg7a2ntmu1qth8f4nl37sm6.apps.googleusercontent.com",
+              "client_id": "80350977885-b2los2fu8629d8vbaa33uinef7mlj3qk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

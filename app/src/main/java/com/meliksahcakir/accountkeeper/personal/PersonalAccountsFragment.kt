@@ -118,8 +118,9 @@ class PersonalAccountsFragment : Fragment(), AccountAdapterListener {
     }
 
     private fun showSnackBar(parameters: SnackBarParameters) {
-        val snackbar =
-            Snackbar.make(requireView(), parameters.messageStringId, Snackbar.LENGTH_SHORT)
+        val length =
+            if (parameters.action != SnackBarAction.NONE) Snackbar.LENGTH_LONG else Snackbar.LENGTH_SHORT
+        val snackbar = Snackbar.make(requireView(), parameters.messageStringId, length)
         snackbar.anchorView = (requireActivity() as MainActivity).mainFab
         if (parameters.action != SnackBarAction.NONE) {
             snackbar.setAction(parameters.actionStringId) {
