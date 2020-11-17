@@ -119,21 +119,19 @@ class LoginViewModel(
         loginRepository.getUser()?.let {
             accountRepository.setUserId(it.uid)
             viewModelScope.launch {
-                if (userRequested) {
-                    if (signedInWithGoogle) {
-                        val name = it.providerData[0].displayName ?: ""
-                        val email = it.providerData[0].email ?: ""
-                        userInfo = UserInfo(
-                            name,
-                            email,
-                            ""
-                        )
-                    }
-                    userInfo?.let { user ->
-                        Preferences.userName = user.username
-                        Preferences.userEmail = user.email
-                        accountRepository.updateRemoteUserInfo(user)
-                    }
+                if (signedInWithGoogle && userRequested) {
+                    val name = it.providerData[0].displayName ?: ""
+                    val email = it.providerData[0].email ?: ""
+                    userInfo = UserInfo(
+                        name,
+                        email,
+                        ""
+                    )
+                }
+                if (userInfo != null) {
+                    Preferences.userName = userInfo!!.username
+                    Preferences.userEmail = userInfo!!.email
+                    accountRepository.updateRemoteUserInfo(userInfo!!)
                 } else {
                     val result = accountRepository.getRemoteUserInfo()
                     if (result is Result.Success) {
