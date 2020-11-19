@@ -2,6 +2,7 @@ package com.meliksahcakir.accountkeeper.settings
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -98,6 +99,16 @@ class SettingsFragment : Fragment() {
         }
         changePasswordCardView.setOnClickListener {
             viewModel.onChangePasswordButtonClicked()
+        }
+        privacyPolicyCardView.setOnClickListener {
+            val url = "https://meliksahcakirr.github.io/accountkeeper/privacy-policy.html"
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(browserIntent)
+        }
+        termsCardView.setOnClickListener {
+            val url = "https://meliksahcakirr.github.io/accountkeeper/terms-and-conditions.html"
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(browserIntent)
         }
     }
 

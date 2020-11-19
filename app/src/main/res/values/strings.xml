@@ -74,4 +74,10 @@
     <string name="accounts_not_found">Accounts have not been found.</string>
     <string name="search_your_saved_accounts">Search your saved accounts</string>
     <string name="saved">Saved</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="warning">Warning</string>
+    <string name="i_accept">I Accept</string>
+    <string name="accept_message">By clicking \"I Accept\", I acknowledged that I should only save/share
+        publicly available accounts not the crucial private ones like credit card information.</string>
 </resources>

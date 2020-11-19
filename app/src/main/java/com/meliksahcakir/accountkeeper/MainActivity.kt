@@ -3,6 +3,7 @@ package com.meliksahcakir.accountkeeper
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
@@ -49,6 +50,17 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
             host.navController.navigate(R.id.findUsersFragment)
             host.navController.safeNavigateToDeepLink(it)
         })
+        if (Preferences.userOnBoardingRequired) {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle(R.string.warning)
+            builder.setMessage(R.string.accept_message)
+            builder.setCancelable(false)
+            builder.setPositiveButton(R.string.i_accept) { dialog, _ ->
+                dialog.cancel()
+                Preferences.userOnBoardingRequired = false
+            }
+            builder.show()
+        }
     }
 
     override fun onNewIntent(intent: Intent?) {

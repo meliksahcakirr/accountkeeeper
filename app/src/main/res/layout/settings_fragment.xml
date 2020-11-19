@@ -52,14 +52,15 @@
                     android:layout_height="0dp"
                     android:layout_marginStart="65dp"
                     android:background="@android:color/transparent"
-                    android:text="Meliksah Cakir"
+                    android:inputType="textPersonName"
                     android:textAppearance="@style/TextAppearance.MyTheme.Body1"
                     android:textColor="?attr/colorOnSurface"
                     android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="@id/userNameCardView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/userNameCardView"
-                    app:layout_constraintTop_toTopOf="@id/userNameCardView" />
+                    app:layout_constraintTop_toTopOf="@id/userNameCardView"
+                    tools:text="Meliksah Cakir" />
 
                 <View
                     android:id="@+id/view0"
@@ -178,6 +179,7 @@
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@color/colorGray"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -222,8 +224,8 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.meliksahcakir.accountkeeper.view.SettingsCardView
-            android:id="@+id/signOutCardView"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/extraCardView"
             style="@style/ProfileCardViewStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -232,10 +234,73 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/settingsCardView"
-            app:scvDrawableEnd="@drawable/ic_arrow_right"
-            app:scvDrawableStart="@drawable/ic_sign_out"
-            app:scvText="@string/sign_out" />
+            app:layout_constraintTop_toBottomOf="@id/settingsCardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.meliksahcakir.accountkeeper.view.SettingsCardView
+                    android:id="@+id/privacyPolicyCardView"
+                    style="@style/SettingsCardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:scvDrawableEnd="@drawable/ic_arrow_right"
+                    app:scvDrawableStart="@drawable/ic_description"
+                    app:scvText="@string/privacy_policy" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorGray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/privacyPolicyCardView" />
+
+                <com.meliksahcakir.accountkeeper.view.SettingsCardView
+                    android:id="@+id/termsCardView"
+                    style="@style/SettingsCardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view4"
+                    app:scvDrawableEnd="@drawable/ic_arrow_right"
+                    app:scvDrawableStart="@drawable/ic_description"
+                    app:scvText="@string/terms_and_conditions" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorGray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/termsCardView" />
+
+                <com.meliksahcakir.accountkeeper.view.SettingsCardView
+                    android:id="@+id/signOutCardView"
+                    style="@style/SettingsCardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view5"
+                    app:scvDrawableEnd="@drawable/ic_arrow_right"
+                    app:scvDrawableStart="@drawable/ic_sign_out"
+                    app:scvText="@string/sign_out" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

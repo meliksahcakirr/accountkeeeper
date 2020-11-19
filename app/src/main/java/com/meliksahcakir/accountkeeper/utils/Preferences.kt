@@ -9,4 +9,5 @@ object Preferences : KotprefModel() {
     var userName by stringPref("")
     var userEmail by stringPref("")
     var nightMode by intPref(default = AppCompatDelegate.MODE_NIGHT_NO, key = PREF_NIGHT_MODE)
+    var userOnBoardingRequired by booleanPref(true)
 }
